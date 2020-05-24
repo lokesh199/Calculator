@@ -25,7 +25,6 @@ allOperatorButtons.forEach((operatorButton) => {
 
 function inputOperand(e) {
   console.log(e);
-  // console.log('input received');
   result = '';
   if (isFirstOperandOnFocus == true) {
     if (firstOperand === '0') {
@@ -265,15 +264,59 @@ function displayOnScreen(data) {
 document.addEventListener('keydown', keyboardInput);
 
 function keyboardInput(e) {
-  // console.log(e);
-  if (e.code === "Escape") {
+  console.log(e);
+  if (e.key === "Escape" || e.key === "c" || e.key === "C") {
     clearButton.dispatchEvent(new Event('click'));
   }
-  else if (e.code === "Digit1") {
-    // console.log(`#${e.code[e.code.length - 1]}`);
-    // document.getElementById("1");
-    // console.log(document.getElementById("1")).dispatchEvent(new Event('click'));
-    // console.log(document.querySelector("#one").dispatchEvent(new Event('click')));
-    document.querySelector("#one").dispatchEvent(new Event('click'));
+  else if (e.key === "1") {
+    console.log(document.querySelector("#one").click());
+  }
+  else if (e.key === "2") {
+    console.log(document.querySelector("#two").click());
+  }
+  else if (e.key === "3") {
+    console.log(document.querySelector("#three").click());
+  }
+  else if (e.key === "4") {
+    console.log(document.querySelector("#four").click());
+  }
+  else if (e.key === "5") {
+    console.log(document.querySelector("#five").click());
+  }
+  else if (e.key === "6") {
+    console.log(document.querySelector("#six").click());
+  }
+  else if (e.key === "7") {
+    console.log(document.querySelector("#seven").click());
+  }
+  else if (e.key === "8") {
+    console.log(document.querySelector("#eight").click());
+  }
+  else if (e.key === "9") {
+    console.log(document.querySelector("#nine").click());
+  }
+  else if (e.key === "0") {
+    console.log(document.querySelector("#zero").click());
+  }
+  else if (e.key === ".") {
+    console.log(document.querySelector("#dot").click());
+  }
+  else if (e.key === "+") {
+    console.log(document.querySelector("#add").click());
+  }
+  else if (e.key === "-") {
+    console.log(document.querySelector("#subtract").click());
+  }
+  else if (e.key === "*") {
+    console.log(document.querySelector("#multiply").click());
+  }
+  else if (e.key === "/") {
+    console.log(document.querySelector("#divide").click());
+  }
+  else if (e.key === "%") {
+    console.log(document.querySelector("#percentage").click());
+  }
+  else if (e.key === "=" || e.key === "Enter") {
+    console.log(document.querySelector("#equals").click());
   }
 }
